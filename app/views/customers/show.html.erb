@@ -1,0 +1,7 @@
+<%= @customer.name %>
+<%= @customer.zip %>
+<%= @customer.address1 %>
+<%= @customer.address2 %>
+<%= link_to "編集する", edit_customer_path %>
+<%= link_to "削除する", customer_path, method: :delete, data: { confirm: "本当によろしいですか？"} %>
+<%= link_to "一覧に戻る", customers_path %>

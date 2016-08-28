@@ -1,1 +1,10 @@
-test
+<h1>顧客一覧</h1>
+<p><%= link_to "新規登録", new_customer_path %></p>
+<% @customers.each do |customer| %>
+  名前:<%= link_to customer.name, customer_path(customer) %>
+  郵便番号:<%= customer.zip %>
+  都道府県:<%= customer.address1 %>
+  市町村:<%= customer.address2 %>
+  <br>
+<% end %>
+<%= link_to "トップに戻る", root_path %>

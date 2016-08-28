@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'customers#index'
+  root 'admin#index'
   
   resources :customers
   

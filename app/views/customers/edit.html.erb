@@ -1,0 +1,27 @@
+<p>編集する</p>
+<%= form_for(@customer) do |f| %>
+
+    <% if @customer.errors.present? %>
+        
+          <%= alert %>
+         
+            <% @customer.errors.full_messages.each do |full_message| %>
+              
+                <%= full_message %>
+              
+            <% end %> 
+          
+        
+     <% end %>
+
+    名前：
+    <%= f.text_field :name %>
+    郵便番号：
+    <%= f.text_field :zip %>
+    都道府県：
+    <%= f.text_field :address1 %>
+    市町村：
+    <%= f.text_field :address2 %>
+    
+    <%= f.submit %>
+<% end %>
