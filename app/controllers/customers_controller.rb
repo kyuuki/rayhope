@@ -23,7 +23,7 @@ class CustomersController < ApplicationController
              else
                 @customers = Customer.all
                 flash.now[:alert] = "メッセージの保存に失敗しました。"
-                redirect_to new_customer_path
+                render :new
             end
         
     end
